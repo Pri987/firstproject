@@ -11,9 +11,13 @@ const Login = () => {
   }
 
   function handleAdd() {
-    const newList = list.concat({ name });
-    setList(newList);
-    setName('');
+    if (name === '') {
+      alert("Please Enter Username!");
+    } else {
+      const newList = list.concat({ name });
+      setList(newList);
+      setName('');
+    }
   }
 
   function handleShow() {
